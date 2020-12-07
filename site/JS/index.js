@@ -18,7 +18,7 @@ function illumination(name){
     
     if (name.animVal=="europe"){
         europe.forEach(element=>{
-        element.style.fill="red"
+        element.style.fill="aqua"
     })
     }
     else if (name.animVal=="asie"){
@@ -28,22 +28,22 @@ function illumination(name){
     }
     else if (name.animVal=="afrique"){
         afrique.forEach(element=>{
-        element.style.fill="red"
+        element.style.fill="gold"
     })
     }
     else if (name.animVal=="oceanie"){
         oceanie.forEach(element=>{
-        element.style.fill="red"
+        element.style.fill="chartreuse"
     })
     }
     else if (name.animVal=="ameriqueSud"){
         ameriqueSud.forEach(element=>{
-        element.style.fill="red"
+        element.style.fill="darkgreen"
     })
     }
     else if (name.animVal=="ameriqueNord"){
         ameriqueNord.forEach(element=>{
-        element.style.fill="red"
+        element.style.fill="blueviolet"
     })
     }
     

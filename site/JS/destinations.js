@@ -143,7 +143,7 @@ function filtrage(choix){
 
  function affichebarrePrix(){
     let prix=document.getElementById("prix").value;
-    document.getElementById("afficheprix").innerHTML=prix +" euros"; 
+    document.getElementById("afficheprix").innerHTML=prix +" €"; 
  }
 
  
