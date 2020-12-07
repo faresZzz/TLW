@@ -27,17 +27,13 @@ function listHotels(hotels){
 
 function formulaire()
 {
-    let nom=document.getElementById("nom").value;
-    let prenom=document.getElementById("prenom").value;
-    let mail=document.getElementById("email").value;
-    let tel=document.getElementById("telephone").value;
     let depart=document.getElementById("datededepart").value;
     let arrive=document.getElementById("datederetour").value;
     let nbAdultes=document.getElementById("nbadulte").value;
     let nbEnfants=document.getElementById("nbenfant").value;
     let pD=document.getElementById("pdej").checked;
     let animaux=document.getElementById("animaux").checked;
-    //let renseignement=document.getElementById("plus").value;
+    let renseignement=document.getElementById("plus").value;
     
     jours=verifDate(depart,arrive);
     let valeurs={"jours":jours,"nbAdultes":nbAdultes,"nbEnfants":nbEnfants,"pD":pD,"animaux":animaux,"depart":depart,"arrive":arrive};
@@ -107,16 +103,14 @@ function estconnecter(){
 
 }
 
+
 function AjoutPanier(){
     let recap =formulaire();
     recap.dest=ville;
     recap.prix=prixfinal;
     if (estconnecter()){
         if (sessionStorage.getItem("panier")===null){
-            console.log(sessionStorage.getItem("panier"));
-            let panier={}
-            panier.ancien=JSON.parse(sessionStorage.getItem("panier"))
-            panier.nouveau=recap;
+            
             sessionStorage.setItem("panier",JSON.stringify(panier))
         }
         else{
