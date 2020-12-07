@@ -86,8 +86,9 @@ function stop(name){
 }
 
 function destination(name){
+    sessionStorage.setItem("continent",name.animVal);
     
-    document.location.href=`/site/html/destinations.html?continent=${name.animVal}`
+    document.location.href="/site/html/destinations.html?";
 }
 
 
