@@ -51,7 +51,7 @@ function listHotels(hotels){
     addDestination(listeHotels)
 }    
 
-
+/* Permet d'afficher les destinations dans la page*/
 function addDestination(listH){
     const aff = document.getElementById("listehotels");
     aff.innerHTML=""
@@ -102,6 +102,8 @@ function stop(hots){
     img.src=hots.image[i];
 }
 
+
+/* Permet de faire "marcher" les différents filtre (Prix,continent...)*/
 function filtre(){
     var listefiltres=[]
     let recherche=document.getElementById("recherchecase").value.toLowerCase();
@@ -143,7 +145,7 @@ function filtrage(choix){
 }
     
     
-
+/* Permet d'afficher le prix calculé selon l'hôtel/nb de jours */
  function affichebarrePrix(){
     let prix=document.getElementById("prix").value;
     document.getElementById("afficheprix").innerHTML=prix +" €"; 
