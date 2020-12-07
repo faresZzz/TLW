@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 function Temperature(listeVille)
 {
     let listeTemp=[]

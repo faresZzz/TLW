@@ -50,16 +50,16 @@ function addInfos(inf){
 
     if(inf.adulte>1){
         if (inf.enfant!=0){
-            voyage.innerText=` Voyage pour ${inf.ville} du ${inf.depart} au ${inf.retour} (${inf.nbJour} jours).\n Pour ${inf.adulte} adultes et ${inf.enfant} enfants\n\n `
+            voyage.innerText=` Voyage pour ${inf.ville} du ${inf.depart} au ${inf.retour} (${inf.nbJour} jours).\n Pour ${inf.adulte} adultes et ${inf.enfant} enfants\n prix: ${inf.prix}\n `
         }
         else{
-            voyage.innerText=` Voyage pour ${inf.ville} du ${inf.depart} au ${inf.retour} (${inf.nbJour} jours).\n Pour ${inf.adulte} adultes \n\n `
+            voyage.innerText=` Voyage pour ${inf.ville} du ${inf.depart} au ${inf.retour} (${inf.nbJour} jours).\n Pour ${inf.adulte} adultes \nprix: ${inf.prix}\n `
         }            
     }else if (inf.enfant!=0){
-        voyage.innerText=` Voyage pour ${inf.ville} du ${inf.depart} au ${inf.retour} (${inf.nbJour} jours).\n Pour ${inf.adulte} adulte et ${inf.enfant} enfants \n\n `
+        voyage.innerText=` Voyage pour ${inf.ville} du ${inf.depart} au ${inf.retour} (${inf.nbJour} jours).\n Pour ${inf.adulte} adulte et ${inf.enfant} enfants \nprix: ${inf.prix}\n `
     }
     else{
-        voyage.innerText=` Voyage pour ${inf.ville} du ${inf.depart} au ${inf.retour} (${inf.nbJour} jours).\n Pour ${inf.adulte} adulte \n\n `
+        voyage.innerText=` Voyage pour ${inf.ville} du ${inf.depart} au ${inf.retour} (${inf.nbJour} jours).\n Pour ${inf.adulte} adulte \nprix: ${inf.prix}\n `
     }
     infospersonnes.appendChild(perso);
     infosVoyages.appendChild(voyage);
