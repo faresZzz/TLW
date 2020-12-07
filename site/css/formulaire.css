@@ -80,3 +80,10 @@ input#effacer:hover {
   #top:hover{
     background-color:red; /* Add a dark-grey background on hover */
   }
+
+
+  h2#destination{
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: underline;
+  }
