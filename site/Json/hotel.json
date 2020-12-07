@@ -60,7 +60,7 @@
         "lien":"../html/formulaire.html"   
     },
     { 
-        "ville": "singapour",
+        "ville": "Singapour",
         "prixAdulte":1000,
         "petitDej":true,
         "animauxOK":true,
