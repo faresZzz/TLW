@@ -1,21 +1,28 @@
-
-class destination{
-    constructor(nom,prix, pitidej,animaux,image,continent,lien,temp){
-        this.nom= nom;
-        this.prix=prix;
-        this.pitidej=pitidej;
-        this.image=image;
-        this.lien=lien;
-        this.continent=continent;
-        this.animaux=animaux;
-        this.temp=temp
+function Temperature(listeVille)
+{
+    let listeTemp=[]
+    for(ville of listeVille){
         
+        let appid="bfb725a2d2eb425c0443cbcdf5c91e8f";
+        fetch("https://api.openweathermap.org/data/2.5/weather?q="+ville+"&appid="+appid+"&units=metric").then(function(reponse)
+        {
+            json=reponse.json();
+            return json;    
+        })
+        .then(function(json)
+        {   
+            
+            listeTemp.push(json["main"]["temp"])
+        })
+        
+
     }
+    console.log(listeTemp);
+    Recup(listeTemp);
+    
 }
 
-
-
-function Recup()
+function Recup(temp)
 {
     
     fetch("../Json/hotel.json")
@@ -29,15 +36,16 @@ function Recup()
     {   
          
         data= json;
-        listHotels(data);
+        listHotels(data,temp);
         conti() 
     })  
 }
 
-function listHotels(hotels){
+function listHotels(hotels, temperature){
     listeHotels=hotels;
     for (i in listeHotels){
-        listeHotels[i].temp=listeTemp[i];
+        console.log(listeHotels[i])
+        console.log(temperature[i])
     }
     console.log(listeHotels)
     addDestination(listeHotels)
@@ -66,7 +74,7 @@ function addDestination(listH){
         over.innerText=`${hotel.ville}: ${hotel.temp} °C`
         
         autreDest.addEventListener("click",function(){localStorage.setItem("ville", hotel.ville)});
-        img.addEventListener("mouseover", function(){defilement(hotel) ;infoHotel(hotel)});
+        img.addEventListener("mouseover", function(){defilement(hotel) });
         img.addEventListener('mouseout',function(){stop(hotel)})
 
         aff.appendChild(nouvDiv);
@@ -114,7 +122,7 @@ function filtrage(choix){
     let listehtls=listeHotels.slice();
     listeHotels.forEach(htls=>{
         
-        if (choix.prix<htls.prix){
+        if (choix.prix<htls.prixAdulte){
             listehtls.splice(listehtls.indexOf(htls),1);
         }
         else if (choix.continent!="All" && choix.continent!= htls.continent){
@@ -123,10 +131,10 @@ function filtrage(choix){
         else if(choix.recherche!="" && choix.recherche!=htls.ville.toLowerCase()){
             listehtls.splice(listehtls.indexOf(htls),1);
         }
-        else if (choix.pitidej==true && htls.pitidej==false){
+        else if (choix.pitidej==true && htls.petitDej==false){
             listehtls.splice(listehtls.indexOf(htls),1);
         }
-        else if (choix.animaux==true && htls.animaux==false){
+        else if (choix.animaux==true && htls.animauxOK==false){
             listehtls.splice(listehtls.indexOf(htls),1);
         }    
     })
@@ -162,32 +170,8 @@ function remontrer() {
   document.documentElement.scrollTop = 0; // le reste
 }
 
- function infoHotel(val){
-   console.log( val.temp);
- }
- function Temperature(listeVille)
-{
-    
-    for(ville of listeVille){
-        
-        let appid="bfb725a2d2eb425c0443cbcdf5c91e8f";
-        fetch("https://api.openweathermap.org/data/2.5/weather?q="+ville+"&appid="+appid+"&units=metric").then(function(reponse)
-        {
-            json=reponse.json();
-            return json;    
-        })
-        .then(function(json)
-        {   
-            console.log(json["main"]["temp"])
-            listeTemp.push(json["main"]["temp"])
-        })
-        
 
-    }
-    console.log(listeTemp)
-    
-    
-}
+ 
 
 function conti(){
     let ul=sessionStorage.getItem("continent");
@@ -196,12 +180,9 @@ function conti(){
     filtre()
 
 }
-var listeTemp=[] ;
+
 Temperature(["Paris","Londres","New York","Venice","Johannesburg","Las Vegas","Singapour", "Rio","Sydney","Tokyo"])
 var listeHotels;
 var i=0;
 var compteur;
-Recup();
-
- 
 window.onscroll=function(){scroll()};
