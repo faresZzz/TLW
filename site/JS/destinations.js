@@ -186,6 +186,12 @@ function remontrer() {
     
 }
 
+function conti(){
+    let ul=URLSearchParams("continent");
+    let selec=document.getElementById(ul);
+    selec.selected="true";
+
+}
 
 var listeHotels;
 var i=0;
