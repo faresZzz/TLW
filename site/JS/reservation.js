@@ -1,21 +1,5 @@
 
 
-
-class destination{
-    constructor(nom,prix, pitidej,animaux,image,continent,lien){
-        this.nom= nom;
-        this.prix=prix;
-        this.pitidej=pitidej;
-        this.image=image;
-        this.lien=lien;
-        this.continent=continent;
-        this.animaux=animaux;
-        
-    }
-}
-
-
-
 function Recup()
 {
     
@@ -35,17 +19,7 @@ function Recup()
 }
 
 function listHotels(hotels){
-    let paris= new destination(hotels[0].ville , hotels[0].prixAdulte , hotels[0].petitDej , hotels[0].animauxOK, hotels[0].image,hotels[0].continent, "../html/formulaire.html?ville=paris");
-    let londres= new destination(hotels[1].ville , hotels[1].prixAdulte , hotels[1].petitDej , hotels[1].animauxOK, hotels[1].image,hotels[1].continent, "../html/formulaire.html?ville=londres");
-    let newYork= new destination(hotels[2].ville , hotels[2].prixAdulte , hotels[2].petitDej , hotels[2].animauxOK, hotels[2].image,hotels[2].continent, "../html/formulaire.html?ville=newyork");
-    let venise= new destination(hotels[3].ville , hotels[3].prixAdulte , hotels[3].petitDej , hotels[3].animauxOK, hotels[3].image,hotels[3].continent, "../html/formulaire.html?ville=venise");
-    let johannesburg= new destination(hotels[4].ville , hotels[4].prixAdulte , hotels[4].petitDej , hotels[4].animauxOK, hotels[4].image,hotels[4].continent, "../html/formulaire.html?ville=johannesburg");
-    let LasVegas= new destination(hotels[5].ville , hotels[5].prixAdulte , hotels[5].petitDej , hotels[5].animauxOK, hotels[5].image,hotels[5].continent, "../html/formulaire.html?ville=LasVegas");
-    let MachuPichu= new destination(hotels[6].ville , hotels[6].prixAdulte , hotels[6].petitDej , hotels[6].animauxOK, hotels[6].image,hotels[6].continent, "../html/formulaire.html?ville=MachuPichu");
-    let Rio= new destination(hotels[7].ville , hotels[7].prixAdulte , hotels[7].petitDej , hotels[7].animauxOK, hotels[7].image,hotels[7].continent, "../html/formulaire.html?ville=Rio");
-    let sydney= new destination(hotels[8].ville , hotels[8].prixAdulte , hotels[8].petitDej , hotels[8].animauxOK, hotels[8].image,hotels[8].continent, "../html/formulaire.html?ville=sydney");
-    let tokyo= new destination(hotels[9].ville , hotels[9].prixAdulte , hotels[9].petitDej , hotels[9].animauxOK, hotels[9].image,hotels[9].continent, "../html/formulaire.html?ville=tokyo");
-    listeHotels=[paris,londres,newYork,venise,johannesburg,LasVegas,MachuPichu,Rio,sydney,tokyo];
+    listeHotels=hotels;
     
     findville(listeHotels);
 }
@@ -89,8 +63,8 @@ function verifDate(dateDpart,dateRetour){
 function findville(liste){
     document.getElementById("destination").innerText= "Voyage pour "+ ville;
     for(let hotel of liste ){
-        if (ville==hotel.nom){
-            return hotel.prix;
+        if (ville==hotel.ville){
+            return hotel.prixAdulte;
         }
     }
     

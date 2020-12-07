@@ -1,17 +1,4 @@
 
-class destination{
-    constructor(nom,prix, pitidej,animaux,image,continent,lien,temp){
-        this.nom= nom;
-        this.prix=prix;
-        this.pitidej=pitidej;
-        this.image=image;
-        this.lien=lien;
-        this.continent=continent;
-        this.animaux=animaux;
-        this.temp=temp
-        
-    }
-}
 
 
 
