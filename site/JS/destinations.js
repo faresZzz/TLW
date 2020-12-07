@@ -34,6 +34,7 @@ function Recup()
     })  
 }
 
+/* Permet de créer une liste contenant les hôtels*/
 function listHotels(hotels){
     let paris= new destination(hotels[0].ville , hotels[0].prixAdulte , hotels[0].petitDej , hotels[0].animauxOK, hotels[0].image,hotels[0].continent, hotels[0].lien, AfficherTemperature(hotels[0].ville));
     let londres= new destination(hotels[1].ville , hotels[1].prixAdulte , hotels[1].petitDej , hotels[1].animauxOK, hotels[1].image,hotels[1].continent, hotels[1].lien, AfficherTemperature(hotels[1].ville));
@@ -50,7 +51,7 @@ function listHotels(hotels){
     addDestination(listeHotels)
 }    
 
-
+/* Permet d'afficher les destinations dans la page*/
 function addDestination(listH){
     const aff = document.getElementById("listehotels");
     aff.innerHTML=""
@@ -101,6 +102,8 @@ function stop(hots){
     img.src=hots.image[i];
 }
 
+
+/* Permet de faire "marcher" les différents filtre (Prix,continent...)*/
 function filtre(){
     var listefiltres=[]
     let recherche=document.getElementById("recherchecase").value.toLowerCase();
@@ -142,7 +145,7 @@ function filtrage(choix){
 }
     
     
-
+/* Permet d'afficher le prix calculé selon l'hôtel/nb de jours */
  function affichebarrePrix(){
     let prix=document.getElementById("prix").value;
     document.getElementById("afficheprix").innerHTML=prix +" €"; 
