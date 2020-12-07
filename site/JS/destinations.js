@@ -34,7 +34,6 @@ function Recup()
     })  
 }
 
-/* Permet de créer une liste contenant les hôtels*/
 function listHotels(hotels){
     let paris= new destination(hotels[0].ville , hotels[0].prixAdulte , hotels[0].petitDej , hotels[0].animauxOK, hotels[0].image,hotels[0].continent, hotels[0].lien, listeTemp[0]);
     let londres= new destination(hotels[1].ville , hotels[1].prixAdulte , hotels[1].petitDej , hotels[1].animauxOK, hotels[1].image,hotels[1].continent, hotels[1].lien, listeTemp[1]);
