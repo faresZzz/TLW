@@ -58,7 +58,7 @@ function creationCompte(id){
     
     if( id.prenom=="" || id.nom=="" || id.mail=="" || id.motDePasse=="" || id.confirm==""){
         let ok = document.createElement("span")
-            ok.innerText=" veuiller remplir toutes les cases"
+            ok.innerText="VeuilleZ remplir toutes les cases"
             document.getElementById("ins").appendChild(ok);
             setTimeout(function(){document.getElementById('ins').removeChild(ok)},2000);
     }
@@ -66,7 +66,7 @@ function creationCompte(id){
         for(personne of comptes){
             if (personne.mail== id.mail){
                 let ok = document.createElement("span")
-                ok.innerText="un compte est deja relier a cette adresse mail"
+                ok.innerText="un compte est deja relié a cette adresse mail"
                 document.getElementById("ins").appendChild(ok);
                 setTimeout(function(){document.getElementById('ins').removeChild(ok)},2000);
                 valide=false
@@ -77,7 +77,7 @@ function creationCompte(id){
         if (valide){
             if (id.confirm!=id.motDePasse){
                 let ok = document.createElement("span")
-                ok.innerText="le mot de passe ne correcpond pas"
+                ok.innerText="Mot de passe incorrect"
                 document.getElementById("ins").appendChild(ok);
                 setTimeout(function(){document.getElementById('ins').removeChild(ok)},2000);
             }
@@ -85,7 +85,7 @@ function creationCompte(id){
             sessionStorage.setItem("nouvelUtilisateur",JSON.stringify(id));
             sessionStorage.setItem('estConnecte',"True");
             let ok = document.createElement("span")
-            ok.innerText=" vous etes biens Inscrit et connecter"
+            ok.innerText="Vous êtes bien inscrit et connecté"
             document.getElementById("ins").appendChild(ok);
             setTimeout(function(){document.getElementById('ins').removeChild(ok)},2000);
             }
@@ -100,13 +100,13 @@ function deconnexion(){
     if (sessionStorage.getItem('estConnecte')=='True'){
         sessionStorage.setItem("estConnecte","False");
         let ok = document.createElement("span")
-        ok.innerText=": Vous etes biens deconnecté"
+        ok.innerText=": Vous êtes bien deconnecté"
         document.getElementById("deco").appendChild(ok);
         setTimeout(function(){document.getElementById('deco').removeChild(ok)},2000);
     }
     else{
         let ok = document.createElement("span")
-        ok.innerText=": Vous n'etiez pas connecté"
+        ok.innerText=": Vous n'étiez pas connecté"
         document.getElementById("deco").appendChild(ok);
         setTimeout(function(){document.getElementById('deco').removeChild(ok)},2000);
     }
