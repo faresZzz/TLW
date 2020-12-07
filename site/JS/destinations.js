@@ -35,18 +35,10 @@ function Recup()
 }
 
 function listHotels(hotels){
-    //let paris= new destination(hotels[0].ville , hotels[0].prixAdulte , hotels[0].petitDej , hotels[0].animauxOK, hotels[0].image,hotels[0].continent, hotels[0].lien, listeTemp[0]);
-    //let londres= new destination(hotels[1].ville , hotels[1].prixAdulte , hotels[1].petitDej , hotels[1].animauxOK, hotels[1].image,hotels[1].continent, hotels[1].lien, listeTemp[1]);
-    //let newYork= new destination(hotels[2].ville , hotels[2].prixAdulte , hotels[2].petitDej , hotels[2].animauxOK, hotels[2].image,hotels[2].continent, hotels[2].lien, listeTemp[2]);
-    //let venice= new destination(hotels[3].ville , hotels[3].prixAdulte , hotels[3].petitDej , hotels[3].animauxOK, hotels[3].image,hotels[3].continent, hotels[3].lien, listeTemp[3]);
-    //let johannesburg= new destination(hotels[4].ville , hotels[4].prixAdulte , hotels[4].petitDej , hotels[4].animauxOK, hotels[4].image,hotels[4].continent, hotels[4].lien, listeTemp[4]);
-    //let LasVegas= new destination(hotels[5].ville , hotels[5].prixAdulte , hotels[5].petitDej , hotels[5].animauxOK, hotels[5].image,hotels[5].continent, hotels[5].lien, listeTemp[5]);
-    //let singapour= new destination(hotels[6].ville , hotels[6].prixAdulte , hotels[6].petitDej , hotels[6].animauxOK, hotels[6].image,hotels[6].continent, hotels[6].lien, listeTemp[6]);
-    //let Rio= new destination(hotels[7].ville , hotels[7].prixAdulte , hotels[7].petitDej , hotels[7].animauxOK, hotels[7].image,hotels[7].continent, hotels[7].lien, listeTemp[7]);
-    //let sydney= new destination(hotels[8].ville , hotels[8].prixAdulte , hotels[8].petitDej , hotels[8].animauxOK, hotels[8].image,hotels[8].continent, hotels[8].lien, listeTemp[8]);
-    //let tokyo= new destination(hotels[9].ville , hotels[9].prixAdulte , hotels[9].petitDej , hotels[9].animauxOK, hotels[9].image,hotels[9].continent, hotels[9].lien, listeTemp[9]);
-    //listeHotels=[paris,londres,newYork,venice,johannesburg,LasVegas,singapour,Rio,sydney,tokyo];
     listeHotels=hotels;
+    for (i in listeHotels){
+        listeHotels[i].temp=listeTemp[i];
+    }
     console.log(listeHotels)
     addDestination(listeHotels)
 }    
@@ -66,14 +58,14 @@ function addDestination(listH){
         autreDest.href=hotel.lien;
         
         img.src=hotel.image[0];
-        img.alt=hotel.nom;
-        img.id=hotel.nom;
-        img.className=hotel.nom;
+        img.alt=hotel.ville;
+        img.id=hotel.ville;
+        img.className=hotel.ville;
         
         over.className="overlay";
-        over.innerText=`${hotel.nom}: ${hotel.temp} °C`
+        over.innerText=`${hotel.ville}: ${hotel.temp} °C`
         
-        autreDest.addEventListener("click",function(){localStorage.setItem("ville", hotel.nom)});
+        autreDest.addEventListener("click",function(){localStorage.setItem("ville", hotel.ville)});
         img.addEventListener("mouseover", function(){defilement(hotel) ;infoHotel(hotel)});
         img.addEventListener('mouseout',function(){stop(hotel)})
 
@@ -85,7 +77,7 @@ function addDestination(listH){
 }
 
 function defilement(htl){
-    img=document.getElementById(htl.nom)
+    img=document.getElementById(htl.ville)
     img.src=htl.image[i];
     if(i<htl.image.length-1){
         i++;
@@ -97,7 +89,7 @@ function defilement(htl){
 }
 function stop(hots){
     clearTimeout(compteur);
-    let img=document.getElementById(hots.nom);
+    let img=document.getElementById(hots.ville);
     i=0;
     img.src=hots.image[i];
 }
@@ -128,7 +120,7 @@ function filtrage(choix){
         else if (choix.continent!="All" && choix.continent!= htls.continent){
             listehtls.splice(listehtls.indexOf(htls),1);
         }
-        else if(choix.recherche!="" && choix.recherche!=htls.nom.toLowerCase()){
+        else if(choix.recherche!="" && choix.recherche!=htls.ville.toLowerCase()){
             listehtls.splice(listehtls.indexOf(htls),1);
         }
         else if (choix.pitidej==true && htls.pitidej==false){
