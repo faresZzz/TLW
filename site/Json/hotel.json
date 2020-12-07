@@ -50,7 +50,7 @@
         "lien":"../html/formulaire.html"   
     },
     { 
-        "ville": "LasVegas",
+        "ville": "Las Vegas",
         "prixAdulte":1000,
         "petitDej":true,
         "animauxOK":true,
