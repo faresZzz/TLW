@@ -8,7 +8,18 @@
     
     
 </head>
+
 <body>
+    
+    <header>
+        <div>
+            <a id="logo" href="index.html"><img src="../images/logorv.jpg" alt="Rocket Voyage"></a>
+        </div>
+        <a id="inscrire" href="inscription.html">S'inscrire</a>
+        <a id="connexion" href="connexion.html" >Se connecter</a>
+        <a href="panier.html"><img src="../images/panier.webp"  height="50" width="75" alt="panier"></a>
+        
+    </header>
     
     <!--Carte SVG recuperer sur amchart.com-->
     <svg class="monde" xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewbox="0 0 1010 651.6">
@@ -192,7 +203,21 @@
         </g>
     </svg>
     <div id="overlay" class="overlay">bonjour</div>
-    <script src="/site/JS/index.js"></script>   
+    <script src="/site/JS/index.js"></script>
+    
+
+    
+    <footer>
+        <button onclick="remontrer()" id="top" title="Remonter"><img src="/site/images/rocket.png" alt="rocket"></button>
+        <div id="basdepage">
+            <nav>
+                <a id="barre1" href="index.html" class="active" >Page d'accueil</a>
+                <a id="barre2" href="contacts.html">Contacts et à propos</a>
+            </nav>
+        </div>
+    </footer>
+    
 </body>
+
 
 </html>
