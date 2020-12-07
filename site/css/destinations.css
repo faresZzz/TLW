@@ -1,0 +1,308 @@
+body{background-color: white;}
+li {display: inline;}
+
+a#logo {margin-left:45%;
+    display: inline;
+    
+}
+
+img {
+	max-width: 100%;
+	
+}
+
+#headerlinks {
+  width: 50%;
+  height: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 5vw;
+}
+
+.overlay {
+  left: 0;
+  position: fixed; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+
+div#date {
+  border-spacing: 10px;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  background-color: rgb(77, 77, 77);
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.filtre{
+display: -moz-grid-line;
+  grid-template-columns: auto ;
+  padding: 10px;
+    
+}
+.grid-container{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 15px 10px;
+  padding: 10px;
+}
+
+
+
+
+div#basdepage {
+  border-radius: 10px;
+  background-color: rgb(77, 77, 77);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+}
+
+button#recherchebouton {
+  height: 25px;
+  width: 75px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  padding: 0;
+  border: none;
+  margin-left: -6px;
+}
+
+button#recherchebouton:hover {
+  background-color: rgb(212, 212, 212);
+  cursor: pointer;
+}
+#recherche {
+  width: 40%;
+}
+
+a#inscrire {
+  text-decoration: none;
+  padding: 10px;
+  font-family: arial;
+  font-size: 1em;
+  color: #FFFFFF;
+  background-color: #b2a2c7;
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  border: 4px solid #FFFFFF;
+  box-shadow: 3px 3px 14px #444444;
+  -webkit-box-shadow: 3px 3px 14px #444444;
+  -moz-box-shadow: 3px 3px 14px #444444;
+}
+    
+    
+a#inscrire:hover {
+  padding: 10px;
+  background-color: #3f3151;
+  box-shadow: 1px 1px 4px #777777;
+  -webkit-box-shadow: 1px 1px 4px #777777;
+  -moz-box-shadow: 1px 1px 4px #777777;
+}
+
+    
+a#connexion {
+  text-decoration: none;
+  padding: 10px;
+  font-family: arial;
+  font-size: 1em;
+  color: #FFFFFF;
+  background-color: #b2a2c7;
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  border: 4px solid #FFFFFF;
+  box-shadow: 3px 3px 14px #444444;
+  -webkit-box-shadow: 3px 3px 14px #444444;
+  -moz-box-shadow: 3px 3px 14px #444444;
+}
+
+
+a#connexion:hover {
+  padding: 10px;
+  background-color: #3f3151;
+  box-shadow: 1px 1px 4px #777777;
+  -webkit-box-shadow: 1px 1px 4px #777777;
+  -moz-box-shadow: 1px 1px 4px #777777;
+}
+
+a#barre1 {
+  text-decoration: none;
+  padding: 10px;
+  font-family: arial;
+  font-size: 1em;
+  color: #FFFFFF;
+  background-color: #b2a2c7;
+}
+      
+      
+a#barre1:hover {
+  padding: 10px;
+  background-color: #3f3151;
+}
+
+      
+a#barre2 {
+  text-decoration: none;
+  padding: 10px;
+  font-family: arial;
+  font-size: 1em;
+  color: #FFFFFF;
+  background-color:#b2a2c7;
+}
+      
+      
+a#barre2:hover {
+  padding: 10px;
+  background-color: #3f3151;
+}    
+
+
+
+div#affichageprix{
+  background-color:#b8b8b8c4;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:17px;
+  padding:8px 19px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #283966;
+}
+
+#top{/* total copie colle de W3School*/
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  width: 4%;
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #555 ; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 5px; /* Some padding */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1px; /* Increase font size */
+  }
+#top:hover{
+  background-color:red; /* Add a dark-grey background on hover */
+}
+
+
+
+
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 20%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 7px;
+  cursor: pointer;
+
+  box-shadow: 1px 1px 1px #000000;
+  background: #3071A9;
+  border-radius: 8px;
+  border: 1px solid #000000;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 2px 2px 1px #000000;
+  border: 1px solid #000000;
+  height: 26px;
+  width: 13px;
+  border-radius: 19px;
+  background: #FFFFFF;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -10.5px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #3071A9;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 7px;
+  cursor: pointer;
+
+  box-shadow: 1px 1px 1px #000000;
+  background: #3071A9;
+  border-radius: 8px;
+  border: 1px solid #000000;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 2px 2px 1px #000000;
+  border: 1px solid #000000;
+  height: 26px;
+  width: 13px;
+  border-radius: 19px;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 7px;
+  cursor: pointer;
+
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #3071A9;
+  border: 1px solid #000000;
+  border-radius: 16px;
+  box-shadow: 1px 1px 1px #000000;
+}
+input[type=range]::-ms-fill-upper {
+  background: #3071A9;
+  border: 1px solid #000000;
+  border-radius: 16px;
+  box-shadow: 1px 1px 1px #000000;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 2px 2px 1px #000000;
+  border: 1px solid #000000;
+  height: 26px;
+  width: 13px;
+  border-radius: 19px;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071A9;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #3071A9;
+}

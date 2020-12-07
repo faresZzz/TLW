@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="/site/css/destinations.css">
+    <link rel="stylesheet" href="/site/css/inscription.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>infos</title>
+    <script src="/site/JS/identification.js"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <a id="logo" href="index.html"><img src="../images/logorv.jpg" alt="Rocket Voyage"></a>
+        </div>
+        <a id="inscrire" href="inscription.html">S'inscrire</a>
+        <a id="connexion" href="connexion.html" >Se connecter</a>
+        <a href="panier.html"><img src="../images/panier.webp"  height="50" width="75" alt="panier"></a>
+
+    </header>
+    <br><br>
+    <div id="ins">
+
+        <div>Prénom : <input type="text" id="prenom"  autocomplete="on" >
+        Nom : <input type="text" id="Nom"  autocomplete="on" >
+        </div><br>
+        <div>Adresse mail : <input type="email" id="email"  autocomplete="on" >
+        </div><br>
+        <div>Mot de passe :<input type="password" id='motdpasse'  >
+ 
+        Confirmer le mot de passe : <input type="password" id='confirmermotdpasse' >
+    </div>
+    <br>
+        <button id="inscription" onclick="identifiants()" value="S'inscrire">
+        S'inscrire</button>
+        <button id="deco" type="button" value="deconnexion" onclick="deconnexion()">Deconnexion</button>
+    </div>
+    <br>
+    
+    <footer>
+        <button onclick="remontrer()" id="top" title="Remonter"><img src="/site/images/rocket.png" alt=""></button>
+        <div id="basdepage">
+            <nav>
+                <a id="barre1" href="index.html" class="active" >Page d'accueil</a>
+                <a id="barre2" href="contacts.html">Contacts et à propos</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

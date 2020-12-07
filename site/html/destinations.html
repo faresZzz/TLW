@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RocketVoyage</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <a id="logo" href="index.html"><img src="../images/logorv.jpg" alt="Rocket Voyage"></a>
+        </div>
+        <a id="inscrire" href="inscription.html">S'inscrire</a>
+        <a id="connexion" href="connexion.html" >Se connecter</a>
+        <a href="panier.html"><img src="../images/panier.webp"  height="50" width="75" alt="panier"></a>
+        
+    </header>
+
+
+    <div id="date">
+        <div id="recherche">
+            <input id="recherchecase" type="search"  placeholder="Recherche destination" onchange="filtre()">
+            <button id="recherchebouton" onclick="filtre()"><i class=""></i>Rechercher</button>
+        </div>
+
+        <nav>
+            <div>
+                
+                Continent <select name="continent" id="continent" onchange="filtre()">
+                    <option value="All">All</option>
+                    <option value="Afrique">Afrique</option> 
+                    <option value="AmeriqueNord">Amerique du Nord</option>   
+                    <option value="AmeriqueSud">Amerique du Sud</option> 
+                    <option value="Asie">Asie</option> 
+                    <option value="Europe">Europe</option> 
+                    <option value="Oceanie">Océanie</option>   
+                    
+                    
+                </select>
+            </div>
+        
+            <div class="filtre">   
+                <br>
+                <label for="prix" >Prix: </label><input type="range" id="prix" name="prix" min="0" max="1000"  value="3000" onchange="filtre(); affichebarrePrix()" >
+                <div id="affichageprix"><span id="afficheprix"> 1000 €</span></div>
+                <br>
+                Petit déjeuner (non par défaut): <input type="checkbox" id="petidej"  onclick="filtre()">
+                <br>
+                Animaux (non par défaut): <input type="checkbox" id="animaux"  onclick="filtre()">
+            </div>
+        </nav>
+    </div>
+
+    <div id="listehotels" class="grid-container"></div>
+    
+
+    <footer>
+        <button onclick="remontrer()" id="top" title="Remonter"><img src="/site/images/rocket.png" alt="rocket"></button>
+        <div id="basdepage">
+            <nav>
+                <a id="barre1" href="index.html" class="active" >Page d'accueil</a>
+                <a id="barre2" href="contacts.html">Contacts et à propos</a>
+            </nav>
+        </div>
+    </footer>
+<script src="../JS/destinations.js"></script><link rel="stylesheet" href="/site/css/destinations.css">
+</body>  
+</html>

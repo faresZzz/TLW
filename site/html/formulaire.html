@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="/site/css/destinations.css">
+    <link rel="stylesheet" href="/site/css/formulaire.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de réservation</title>
+    
+    <script src="/site/JS/reservation.js"></script>
+</head>
+<body >
+    <header>
+        <div>
+            <a id="logo" href="index.html"><img src="../images/logorv.jpg" alt="Rocket Voyage"></a>
+        </div>
+        <a id="inscrire" href="inscription.html">S'inscrire</a>
+        <a id="connexion" href="connexion.html" >Se connecter</a>
+        <a href="panier.html"><img src="../images/panier.webp"  height="50" width="75" alt="panier"></a>
+    </header>
+
+    <br><br><br>
+
+    <h2 id="destination"></h2>
+    <form id= "forumulaireResa"  action="/site/html/recapitulatif.html" method="GET" onchange="formulaire()"  autocomplete="on">
+        
+        <fieldset> <legend>Identité</legend>
+            <div>
+                Nom*: <input type="text" id="nom" name="nom" >           
+                Prénom*: <input type="text" name="prenom" id="prenom"><br> <br>
+            </div>
+            <div>
+                Adresse mail*: <input type="email" name="email"  id="email"  >
+                Télephone* : <input type="tel" name="telephone" id="telephone"  >
+            </div>
+        </fieldset><br>
+        
+        <fieldset> <legend>Voyage</legend>  
+        
+            <div>
+                Date de départ*: <input type="date" name="datededepart" id="datededepart"> 
+                Date de retour*: <input type="date" name="datederetour" id="datederetour">
+                <span id="validiteDates"></span>
+            </div><br>
+            <div>
+                Nombre d'adultes*: <select name="nbadulte" id="nbadulte">
+                    <option value="1">1</option>
+                    <option value="2">2</option>   
+                    <option value="3">3</option>   
+                    <option value="4">4</option>   
+                    <option value="5">5</option>   
+                    <option value="6">6</option>   
+                    <option value="7">7</option>   
+                </select>
+                Nombre d'enfants*:  <select name="nbenfant" id="nbenfant">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>   
+                    <option value="3">3</option>   
+                    <option value="4">4</option>   
+                    <option value="5">5</option>   
+                    <option value="6">6</option>   
+                    <option value="7">7</option>   
+                </select>
+            </div><br>
+            <div>
+                Petit déjeuner* (non par défaut): <input type="checkbox" id="pdej" name="pdej" ><br><br>
+                Animaux* (non par défaut): <input type="checkbox" id="animaux" name="animaux" >
+            </div><br>
+        </fieldset>
+        <br>
+        <fieldset><legend>Informations Complémentaires</legend>
+            Renseignement: <textarea id="plus" name="plus"> </textarea> <br>
+        </fieldset>
+        <br>
+        <span id="total" ></span>
+        <span id="pasConnect"></span>
+        <input id="reserver" type="submit"  value="Réserver" onclick="estconnecter()"> 
+        <input id="effacer" type="reset" value="Effacer" >
+        <button id="ajoutPanier" onclick=" estconnecter(),AjoutPanier()">Ajouter au panier</button>
+
+    </form>
+    <br>
+    <footer>
+        <button onclick="remontrer()" id="top" title="Remonter"><img src="/site/images/rocket.png" alt="rocket"></button>
+        <div id="basdepage">
+            <nav>
+                <a id="barre1" href="index.html" class="active" >Page d'accueil</a>
+                <a id="barre2" href="contacts.html">Contacts et à propos</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

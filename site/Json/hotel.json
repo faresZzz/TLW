@@ -1,0 +1,102 @@
+[
+    { 
+        "ville": "Paris",
+        "prixAdulte":500,
+        "petitDej":true,
+        "animauxOK":true,
+        "prixAnimaux":5,
+        "continent":"Europe",
+        "image":["/site/images/paris.jpg","/site/images/paris2.jpg", "/site/images/paris3.jpg"],
+        "lien":"../html/formulaire.html"  
+    },
+    { 
+        "ville":"Londres",
+        "prixAdulte":500,
+        "petitDej":false,
+        "animauxOK":true,
+        "prixAnimaux":5,
+        "continent":"Europe",
+        "image":["/site/images/londres.jpg","/site/images/londres2.jpg", "/site/images/londres3.jpg"],
+        "lien":"../html/formulaire.html"    
+    },
+    { 
+        "ville": "New York",
+        "prixAdulte":800,
+        "petitDej":false,
+        "animauxOK":true,
+        "prixAnimaux":5,
+        "continent":"AmeriqueNord",
+        "image":["/site/images/newyork.jpg","/site/images/newyork2.jpg", "/site/images/newyork3.jpg"],
+        "lien":"../html/formulaire.html"    
+    },
+    { 
+        "ville": "Venice",
+        "prixAdulte":700,
+        "petitDej":true,
+        "animauxOK":false,
+        "prixAnimaux":5,
+        "continent":"Europe",
+        "image":["/site/images/venise.jpg","/site/images/venise2.jpg", "/site/images/venise3.jpg"],
+        "lien":"../html/formulaire.html"    
+    },
+    { 
+        "ville": "Johannesburg",
+        "prixAdulte":800,
+        "petitDej":true,
+        "animauxOK":true,
+        "prixAnimaux":5,
+        "continent":"Afrique",
+        "image":["/site/images/johannesburg.jpg","/site/images/johannesburg2.jpg", "/site/images/johannesburg3.jpg"],
+        "lien":"../html/formulaire.html"   
+    },
+    { 
+        "ville": "LasVegas",
+        "prixAdulte":1000,
+        "petitDej":true,
+        "animauxOK":true,
+        "prixAnimaux":5,
+        "continent":"AmeriqueNord",
+        "image":["/site/images/LasVegas.jpg","/site/images/LasVegas2.jpg", "/site/images/LasVegas3.jpg"],
+        "lien":"../html/formulaire.html"   
+    },
+    { 
+        "ville": "singapour",
+        "prixAdulte":1000,
+        "petitDej":true,
+        "animauxOK":true,
+        "prixAnimaux":5,
+        "continent":"Asie",
+        "image":["/site/images/singapour.jpg","/site/images/singapour2.jpg", "/site/images/singapour3.jpg"],
+        "lien":"../html/formulaire.html"   
+    },
+    { 
+        "ville": "Rio",
+        "prixAdulte":500,
+        "petitDej":true,
+        "animauxOK":true,
+        "prixAnimaux":5,
+        "continent":"AmeriqueSud",
+        "image":["/site/images/rio.jpg","/site/images/rio2.jpg", "/site/images/rio3.jpg"],
+        "lien":"../html/formulaire.html"   
+    },
+    { 
+        "ville": "Sydney",
+        "prixAdulte":800,
+        "petitDej":true,
+        "animauxOK":true,
+        "prixAnimaux":5,
+        "continent":"Oceanie",
+        "image":["/site/images/sydney.jpg","/site/images/sydney2.jpg", "/site/images/sydney3.jpg"],
+        "lien":"../html/formulaire.html"   
+    },
+    { 
+        "ville": "Tokyo",
+        "prixAdulte":900,
+        "petitDej":true,
+        "animauxOK":false,
+        "prixAnimaux":5,
+        "continent":"Asie",
+        "image":["/site/images/tokyo.jpg","/site/images/tokyo2.jpg", "/site/images/tokyo3.jpg"],
+        "lien":"../html/formulaire.html"   
+    }
+]

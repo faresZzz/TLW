@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="/site/css/destinations.css">
+    <link rel="stylesheet" href="/site/css/recapitulatif.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/site/JS/recapitulatif.js"></script>
+</head>
+<body onload="recupUrl()" id="body">
+    <header>
+        <div>
+            <a id="logo" href="index.html"><img src="../images/logorv.jpg" alt="Rocket Voyage"></a>
+        </div>
+        <a id="inscrire" href="inscription.html">S'inscrire</a>
+        <a id="connexion" href="connexion.html" >Se connecter</a>
+        <a href="panier.html"><img src="../images/panier.webp"  height="50" width="75" alt="panier"></a>
+
+    </header>
+    <br><br>
+   
+    <div id="recap"> 
+        <fieldset> <legend>Récapitulatif de la commande    </legend>
+            <div id="infospersonnes"><h2>Informations personelles</h2></div>
+            <div id="infosVoyages"><h2>Informations pour le voyage</h2></div>
+        </fieldset>
+    </div>
+
+    <div>
+        <br>
+        <button id="payer" type="button" value="Comfimer/ aller au payement" onclick="blague()">Payer</button>
+    </div>
+    <br><br>
+   <footer>
+        <button onclick="remontrer()" id="top" title="Remonter"><img src="/site/images/rocket.png" alt=""></button>
+        <div id="basdepage">
+            <nav>
+                <a id="barre1" href="index.html" class="active" >Page d'accueil</a>
+                <a id="barre2" href="contacts.html">Contacts et à propos</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
