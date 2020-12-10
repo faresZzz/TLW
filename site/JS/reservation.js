@@ -94,7 +94,7 @@ function prix(infos){
 
 function estconnecter(){
     
-    if(sessionStorage.getItem('estConnecte')!='true'){
+    if(sessionStorage.getItem('estConnecte')!='True'){
         
         event.preventDefault();
         document.getElementById('pasConnect').textContent ="Veuillez vous connecter";

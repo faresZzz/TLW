@@ -22,6 +22,10 @@ function Temperature(listeVille)
     Recup(listeTemp);
     
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> fc2eae57da84d58c515072a66dc461b0d471b0d3
 
 function Recup(temp)
 {
