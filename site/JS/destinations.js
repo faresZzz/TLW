@@ -18,7 +18,7 @@ function Temperature(listeVille)
         
 
     }
-    console.log(listeTemp);
+    
     Recup(listeTemp);
     
 }
@@ -39,17 +39,20 @@ function Recup(temp)
     })
     .then(function(json)
     {   
-         
+        
         data= json;
-        listHotels(data,temp);
+        listHotels(data,temp)
+        
         conti() 
     })  
 }
 
 function listHotels(hotels, temperature){
     listeHotels=hotels;
-    for (i in listeHotels){
-        console.log(listeHotels[i])
+    
+    console.log(temperature)
+    for (let i in listeHotels){
+        console.log(i)
         console.log(temperature[i])
     }
     console.log(listeHotels)
@@ -125,6 +128,9 @@ function filtre(){
 function filtrage(choix){
     
     let listehtls=listeHotels.slice();
+    if (choix.recherche=="decolage"){
+        
+    }
     listeHotels.forEach(htls=>{
         
         if (choix.prix<htls.prixAdulte){
@@ -134,6 +140,7 @@ function filtrage(choix){
             listehtls.splice(listehtls.indexOf(htls),1);
         }
         else if(choix.recherche!="" && choix.recherche!=htls.ville.toLowerCase()){
+            
             listehtls.splice(listehtls.indexOf(htls),1);
         }
         else if (choix.pitidej==true && htls.petitDej==false){

@@ -46,7 +46,7 @@ function addInfos(inf){
     let perso=document.createElement("div");
     let voyage=document.createElement("div");
     
-    perso.innerText=`bonjour ${inf.nom} ${inf.prenom}\n Veuiller verifier les informations de reservation si elles ne sont pas juste nous vous invitons à retourner en arriere pour les corriger.\n nom: ${inf.nom} prenom: ${inf.prenom}\n mail: ${inf.mail} telephone: ${inf.tel}`;
+    perso.innerText=`bonjour ${inf.nom} ${inf.prenom}\n Veuillez vérifier les informations de réservation. Si elles ne sont pas juste nous vous invitons à retourner en arriere pour les corriger.\n nom: ${inf.nom} prenom: ${inf.prenom}\n mail: ${inf.mail} telephone: ${inf.tel}`;
 
     if(inf.adulte>1){
         if (inf.enfant!=0){
